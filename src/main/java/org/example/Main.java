@@ -22,5 +22,32 @@ public class Main {
 
         String json = gson.toJson(family);
         System.out.println(json);
+
+        Family family2 = gson.fromJson(json, Family.class);
+        System.out.println(family2);
     }
+//{
+//  "humans": [
+//    {
+//      "humanName": "Валерий",
+//      "age": 55,
+//      "gender": "М",
+//      "car": {
+//        "carMark": "Mercedes",
+//        "type": "sedan",
+//        "way": 1234
+//      }
+//    },
+//    {
+//      "humanName": "Михаил",
+//      "age": 19,
+//      "gender": "M",
+//      "car": {
+//        "carMark": "Lada",
+//        "type": "sedan",
+//        "way": 123
+//      }
+//    }
+//  ]
+//}
 }
