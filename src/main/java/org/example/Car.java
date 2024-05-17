@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 
 public class Car {
 
-    @SerializedName("mark")
     private String carMark;
     private String type;
-   transient private int way;
+    private int way;
 }

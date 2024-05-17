@@ -2,6 +2,10 @@ package org.example;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.example.deserializers.CarDeserializer;
+import org.example.deserializers.HumanDeserialiser;
+import org.example.serializators.CarSerializer;
+import org.example.serializators.HumanSerializer;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +21,10 @@ public class Main {
         family.addHuman(son);
 
         Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Car.class, new CarSerializer())
+                .registerTypeAdapter(Human.class, new HumanSerializer())
+                .registerTypeAdapter(Car.class, new CarDeserializer())
+                .registerTypeAdapter(Human.class, new HumanDeserialiser())
                 .setPrettyPrinting()
                 .create();
 
@@ -32,7 +40,7 @@ public class Main {
 //      "humanName": "Валерий", //todo изменить на name
 //      "age": 55,
 //      "gender": "М",
-//      "car": {
+//      "car": {                    //todo store as string
 //        "carMark": "Mercedes", //todo change on mark
 //        "type": "sedan",
 //        "way": 1234 //todo delete
@@ -42,7 +50,7 @@ public class Main {
 //      "humanName": "Михаил",
 //      "age": 19,
 //      "gender": "M", //todo delete
-//      "car": {
+//      "car": {        //todo store as string
 //        "carMark": "Lada",
 //        "type": "sedan",
 //        "way": 123

@@ -11,9 +11,8 @@ import lombok.NoArgsConstructor;
 
 public class Human {
 
-    @SerializedName("name")
     private String humanName;
     private int age;
-   transient private String gender;
+    private String gender;
     private Car car;
 }
