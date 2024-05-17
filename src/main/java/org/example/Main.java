@@ -29,19 +29,19 @@ public class Main {
 //{
 //  "humans": [
 //    {
-//      "humanName": "Валерий",
+//      "humanName": "Валерий", //todo изменить на name
 //      "age": 55,
 //      "gender": "М",
 //      "car": {
-//        "carMark": "Mercedes",
+//        "carMark": "Mercedes", //todo change on mark
 //        "type": "sedan",
-//        "way": 1234
+//        "way": 1234 //todo delete
 //      }
 //    },
 //    {
 //      "humanName": "Михаил",
 //      "age": 19,
-//      "gender": "M",
+//      "gender": "M", //todo delete
 //      "car": {
 //        "carMark": "Lada",
 //        "type": "sedan",

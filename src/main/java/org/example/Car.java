@@ -1,5 +1,6 @@
 package org.example;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,9 @@ import lombok.NoArgsConstructor;
 @Data
 
 public class Car {
+
+    @SerializedName("mark")
     private String carMark;
     private String type;
-    private int way;
+   transient private int way;
 }
